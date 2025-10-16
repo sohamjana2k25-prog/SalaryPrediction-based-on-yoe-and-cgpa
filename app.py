@@ -2,13 +2,13 @@ import numpy as np
 from flask import Flask,request,render_template
 import pickle
 
-flask_app = Flask(__name__,template_folder='mytemp')
+app = Flask(__name__,template_folder='mytemp')
 model = pickle.load(open("model.pkl", "rb"))
 
-@flask_app.route("/")
+@app.route("/")
 def Home():
     return render_template(".idk.html")
-@flask_app.route('/prediction',methods=["POST"])
+@app.route('/prediction',methods=["POST"])
 
 def predict():
 
@@ -43,6 +43,6 @@ def predict():
             prediction_text=f"An unexpected error occurred: {e}"
         )
 if __name__ == "__main__":
-    flask_app.run(debug=True)
+    app.run(debug=True)
 
 
