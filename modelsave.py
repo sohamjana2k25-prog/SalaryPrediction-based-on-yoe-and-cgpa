@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 
 from lrclass import linear_regression
 
-df = pd.read_csv('./placement_with_rating.csv')
+df = pd.read_csv('placement_with_rating.csv')
 X = df.iloc[:, :-1].values
 Y = df.iloc[:, -1].values
 
