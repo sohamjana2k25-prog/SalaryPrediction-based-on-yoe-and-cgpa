@@ -5,10 +5,10 @@ import pickle
 app = Flask(__name__,template_folder='mytemp')
 model = pickle.load(open("model.pkl", "rb"))
 
-app.route("/")
+@app.route("/")
 def Home():
     return render_template(".idk.html")
-app.route('/prediction',methods=["POST"])
+@app.route('/prediction',methods=["POST"])
 
 def predict():
 
