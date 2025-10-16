@@ -7,7 +7,7 @@ model = pickle.load(open("model.pkl", "rb"))
 
 @flask_app.route("/")
 def Home():
-    return render_template("idk.html")
+    return render_template("mytemp/.idk.html")
 @flask_app.route('/prediction',methods=["POST"])
 
 def predict():
@@ -27,19 +27,19 @@ def predict():
 
 
         return render_template(
-            "idk.html",
+            "mytemp/.idk.html",
             prediction_text=f"The Predicted salary is ${predicted_salary:,.2f}"
         )
 
     except ValueError:
         return render_template(
-            "idk.html",
+            "mytemp/.idk.html",
             prediction_text="Error: Please ensure all input fields are valid numbers."
         )
     except Exception as e:
 
         return render_template(
-            "idk.html",
+            "mytemp/.idk.html",
             prediction_text=f"An unexpected error occurred: {e}"
         )
 if __name__ == "__main__":
