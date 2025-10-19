@@ -61,7 +61,7 @@
 <div class="login">
     <h1>Package Prediction(per hour) Model based on years of Experience and CGPA of a particular company</h1>
     <p>This is a basic model based on linear regression. The model is made from scratch by implementing stochastic gradient descent.</p>
-    <a href="placement_with_rating.csv" download="placement_with_rating.csv">Download Training Dataset </a>
+    <a href="https://www.kaggle.com/datasets/sohamjana2025/yoe-and-cgpa-vs-salary-per-hour" download="https://www.kaggle.com/datasets/sohamjana2025/yoe-and-cgpa-vs-salary-per-hour">Download Training Dataset </a>
     <p>The dataset trained for YOE is an actual kaggle dataset however the datas of CGPA is a toy datas. This model has an accuracy of 90.54 percentage. However the scikit-learn's inbuilt linear regression has accuracy of 88.10 percentage </p>
     <form action="{{url_for('predict')}}" method="POST">
         <input type="text" name="YOE" placeholder="YOE" required="required"/>
